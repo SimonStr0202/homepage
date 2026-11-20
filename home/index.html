@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SimonStr</title>
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+		<script src="/js/banner.js" defer></script>
+	</head>
+	<body>
+		<top-banner id="top-banner"></top-banner>
+		<h1>SimonStr</h1>
+		<h2>News</h2>
+		<div class="vstack" id="news-container">
+			<template id="news-template">
+				<div class="card vstack expanded-element">
+					<h3 class="news-header"></h3>
+					<label class="news-content"></label>
+				</div>
+			</template>
+			<div class="loader" id="news-loader"></div>
+		</div>
+		<script src="/home/script.js"></script>
+	</body>
+</html>

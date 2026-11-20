@@ -1,0 +1,20 @@
+:root {
+    --accent: #ff4c1e;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --surface: #ffffff;
+    --page: #cfdddb;
+}
+
+.get-button {
+    font-style: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    width: 4em;
+    background-color: blue;
+    border-radius: 5em;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+}
