@@ -57,7 +57,7 @@ Diese Daten werden verwendet, um die standortbasierten Spielfunktionen bereitzus
 
 Die Standortberechtigung kannst du jederzeit in den Einstellungen deines Geräts ändern oder widerrufen. Ohne Standortzugriff können bestimmte Spielfunktionen möglicherweise nicht oder nur eingeschränkt verwendet werden.
 
-**Wichtig:** [BITTE VOR VERÖFFENTLICHUNG PRÜFEN: Werden Standortdaten ausschließlich auf dem Gerät verarbeitet oder werden GPS-Koordinaten beziehungsweise daraus abgeleitete Bewegungsdaten auch an andere Spieler oder an unsere Server übertragen? Hier muss die tatsächliche Funktionsweise beschrieben werden.]
+Die meisten Daten werden direkt auf dem Gerät verarbeitet und gespeichert. Bei Mehrspieler-Verbindungen wird ggf. der Standort an deine Mitspieler gesendet, um den Mehrspieler-Modus zu ermöglichen. Außerdem werden die Daten möglicherweise auf unseren Servern gespeichert, um dem Nutzer ein Backup zu ermöglichen. Dies geschieht nur durch explizite Aktion des Nutzers.
 
 ### 3.3 Spiel- und Kontofortschrittsdaten
 
@@ -86,9 +86,7 @@ Dazu können insbesondere gehören:
 - Spielbezogene Positionen oder Bewegungsinformationen, soweit für die Multiplayer-Funktion erforderlich
 - Informationen über den aktuellen Spielraum beziehungsweise die Spielsession
 
-Für Online-Multiplayer verwendet Sombies Supabase Realtime und weitere Supabase-Dienste.
-
-**Bitte prüfen und ergänzen:** [BESCHREIBUNG DER KONKRET ÜBERTRAGENEN MULTIPLAYER-DATEN UND DEREN SPEICHERDAUER.]
+Es werden nur dein Standort und dein aktueller Status zwischen Geräten übertragen. Diese bleiben auf den anderen Geräten, bis die Sitzung beendet ist oder die Daten durch neue ersetzt werden.
 
 Bei lokalen Multiplayer-Verbindungen über Bluetooth können Daten direkt zwischen den beteiligten Geräten ausgetauscht werden. Welche Daten dabei übertragen werden, richtet sich nach der verwendeten Spielfunktion.
 
@@ -108,7 +106,7 @@ Nach dem derzeitigen technischen Stand verwendet Sombies HealthKit zum Schreiben
 
 Gesundheitsdaten werden besonders geschützt. Wir verwenden sie ausschließlich für die beschriebenen Funktionen.
 
-**Wichtig:** [BITTE BESTÄTIGEN: Werden Gesundheitsdaten oder Trainingsrouten ausschließlich in Apple Health gespeichert oder werden sie zusätzlich an Supabase beziehungsweise andere Server übertragen? Falls eine Übertragung erfolgt, muss diese hier genau beschrieben werden.]
+Die Daten werden direkt in Apple Health bzw. HealthKit gespeichert. Bei Backups werden deine gelaufenen Strecken auch auf unserem Server gespeichert. Dies passiert nach der Aktion des Nutzers.
 
 Du kannst Berechtigungen für Apple Health jederzeit in den Einstellungen deines Geräts verwalten.
 
@@ -123,9 +121,6 @@ Anbieter:
 Supabase Inc.  
 [AKTUELLE ANSCHRIFT DES ANBIETERS ERGÄNZEN]
 
-Projektadresse:  
-https://hdqubxxsjkucpyxbcjgv.supabase.co
-
 Je nach Funktion können insbesondere Kontodaten, Benutzer-IDs, Spielstände und Multiplayer-Daten verarbeitet werden.
 
 Backups können im Supabase Storage gespeichert werden. Dabei wird ein Backup dem jeweiligen Benutzerkonto zugeordnet.
@@ -137,9 +132,8 @@ Weitere Informationen zum Datenschutz bei Supabase:
 https://supabase.com/privacy
 
 **Vor Veröffentlichung ergänzen:**
-- Tatsächlicher Hosting-Standort beziehungsweise die konfigurierte Supabase-Region: [REGION]
-- Eingesetzte Unterauftragsverarbeiter: [ANGABEN]
-- Besteht ein Vertrag zur Auftragsverarbeitung (AV-Vertrag) mit Supabase? [JA/NEIN – PRÜFEN]
+- Tatsächlicher Hosting-Standort beziehungsweise die konfigurierte Supabase-Region: Europa
+- Besteht ein Vertrag zur Auftragsverarbeitung (AV-Vertrag) mit Supabase? Nein
 
 ### 4.2 Apple
 
@@ -160,7 +154,7 @@ Wir verarbeiten personenbezogene Daten insbesondere zu folgenden Zwecken:
 | Erstellung und Verwaltung eines Benutzerkontos | Art. 6 Abs. 1 lit. b DSGVO |
 | Bereitstellung der Spielfunktionen | Art. 6 Abs. 1 lit. b DSGVO |
 | Verarbeitung von Standortdaten für standortbasierte Spielfunktionen | Art. 6 Abs. 1 lit. b DSGVO und gegebenenfalls Art. 6 Abs. 1 lit. a DSGVO |
-| Online-Multiplayer und Synchronisierung | Art. 6 Abs. 1 lit. b DSGVO |
+| Synchronisierung | Art. 6 Abs. 1 lit. b DSGVO |
 | Speicherung von Spielständen und Backups | Art. 6 Abs. 1 lit. b DSGVO |
 | Speicherung von Trainingsdaten in Apple Health | Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit den erteilten HealthKit-Berechtigungen |
 
@@ -173,20 +167,36 @@ Personenbezogene Daten werden nur so lange gespeichert, wie dies für die jeweil
 - Kontodaten werden grundsätzlich so lange gespeichert, wie das Benutzerkonto besteht.
 - Spielstände und Fortschrittsdaten werden gespeichert, solange sie für die Bereitstellung des Kontos und der Spielfunktionen benötigt werden.
 - Backups werden entsprechend ihrer vorgesehenen Funktion gespeichert.
-- Standort- und Bewegungsdaten werden entsprechend der jeweiligen Spielfunktion verarbeitet. [KONKRETE SPEICHERDAUER ERGÄNZEN.]
+- Standort- und Bewegungsdaten werden entsprechend der jeweiligen Spielfunktion verarbeitet. Sie bleiben bis zum Ende der Sitzung auf den Geräten und werden danach entfernt.
 - Nach einer Kontolöschung werden personenbezogene Daten gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten oder sonstigen zulässigen Gründe für eine weitere Speicherung bestehen.
 
 ## 7. Löschung des Benutzerkontos
 
 Du kannst die Löschung deines Benutzerkontos beantragen.
 
-Hierzu kannst du uns unter folgender Adresse kontaktieren:
+Hierzu kannst du uns unter folgender Adresse kontaktieren oder die Löschung in der App starten:
 
 sake_haze3b@icloud.com
 
 Bei einer Kontolöschung werden die mit deinem Konto verbundenen personenbezogenen Daten und Spielstände gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten oder sonstigen rechtmäßigen Gründe für eine weitere Speicherung bestehen.
 
-**Vor Veröffentlichung ergänzen:** [BESCHREIBUNG DES TATSÄCHLICHEN LÖSCHPROZESSES, INSBESONDERE SUPABASE-AUTH-KONTO, DATENBANKDATEN UND BACKUPS.]
+Um eine versehentliche Löschung zu verhindern, wird dein Konto nach Eingang des Löschantrags zunächst für einen Zeitraum von 72 Stunden deaktiviert.
+
+Während dieses Zeitraums:
+
+* Ist eine Anmeldung und Nutzung des Kontos nicht möglich.
+* Sind Multiplayer- und sonstige kontogebundene Funktionen deaktiviert.
+* Kannst du deinen Löschantrag widerrufen und dein Konto wiederherstellen lassen.
+
+Wenn du deinen Löschantrag innerhalb dieser 72 Stunden widerrufst, wird die Kontolöschung abgebrochen und dein Konto wieder aktiviert.
+
+Wenn innerhalb der 72 Stunden kein Widerruf erfolgt, wird die endgültige Löschung des Kontos und der zugehörigen personenbezogenen Daten eingeleitet.
+
+Gesetzliche Aufbewahrungspflichten und sonstige gesetzlich zulässige Ausnahmen von der Löschung bleiben unberührt.
+
+Du kannst dich bei Fragen oder zur Ausübung deiner Datenschutzrechte jederzeit unter sake_haze3b@icloud.com an uns wenden.
+
+Unabhängig von diesem Verfahren kannst du ausdrücklich eine sofortige Bearbeitung deines Löschverlangens verlangen. In diesem Fall wird die gesetzlich erforderliche Löschung unverzüglich geprüft und umgesetzt.
 
 ## 8. Weitergabe von Daten
 
